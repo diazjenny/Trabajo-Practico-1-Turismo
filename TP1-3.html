@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/85def4d745.js"></script>
+    <script src="https://use.fontawesome.com/d3cf2dc502.js"></script>
+    <script src="https://use.fontawesome.com/83c54c54ab.js"></script>
+    <script src="https://use.fontawesome.com/a529523b4b.js"></script>
+    <script src="https://use.fontawesome.com/02bd8e69f4.js"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+        root {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        a {
+            color: #0da7ae;
+        }
+
+        .ajuste-nav {
+            background-color: #0da7ae;
+            font-size: 1.3vw;
+        }
+
+        .ajuste-carousel {
+            height: 19rem;
+            margin: 0rem;
+            padding: 0rem;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            max-height: 19rem;
+        }
+
+        .carousel-inner {
+            height: 19rem;
+        }
+
+        .letra-carrusel {
+            font-size: 1.8vw;
+            font-weight: bolder;
+        }
+
+        .align {
+            display: flex;
+            margin: 5%;
+        }
+
+        .letra-carrusel {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .compra {
+            padding: 0rem 13rem;
+        }
+
+        .titulo-compra {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 2.1vw;
+        }
+
+        .ajuste-h2-accordion {
+            font-size: 1.3vw;
+            color: #0da7ae;
+        }
+
+        label {
+            font-size: 1.1vw;
+        }
+
+        .form-control {
+            height: 40px;
+            font-size: 1vw;
+            background-color: #f5f5f5;
+            border-color: #f5f5f5;
+            border-radius: 2px 0px 0px 2px
+        }
+
+        .card-body-accordeon {
+            padding: 0.5rem;
+        }
+
+
+
+        .letra-header-tarjeta {
+            font-size: 1.2vw;
+        }
+
+        .letra-tarjeta {
+            font-size: 1.2vw;
+        }
+
+        .btn-tarjeta {
+            background-color: #0da7ae;
+            border-color: #0da7ae;
+            color: #FFFFFF;
+            font-size: 1.2vw;
+        }
+
+        .letra-factura {
+            font-size: 1vw;
+        }
+
+        .btn-comprar {
+            min-height: 3.125rem;
+            background-color: #0da7ae;
+            border-color: #0da7ae;
+            font-size: 1.5vw;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            line-height: 15px;
+
+        }
+
+        .titulo2 {
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 2.1vw;
+        }
+
+        .newsletter {
+            padding: 40px 0;
+        }
+
+        .newsletter .content {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2
+        }
+
+        .btn-susc {
+            min-height: 40px;
+            border-radius: 0;
+            background: #0da7ae;
+            color: #fff;
+            font-size: 1.1vw;
+            font-weight: 200
+        }
+
+        .unsubscribe-link {
+            text-decoration: none;
+            font-size: 1.1vw;
+            color: #000000;
+        }
+
+        .unsubscribe-link:hover {
+            text-decoration: none;
+            color: #00838F;
+        }
+
+        .ajuste-container {
+            margin-top: 50px;
+        }
+
+        .ajuste-h6-footer {
+            font-size: 1.1vw;
+        }
+
+        .ajuste-p-footer {
+            font-size: 0.9vw;
+        }
+
+        .footer-copyright {
+            margin-top: 13px
+        }
+
+        .fa-facebook-f {
+            color: #3b5999
+        }
+
+        .fa-instagram {
+            color: #e4405f
+        }
+
+        .fa-youtube {
+            color: #cd201f
+        }
+
+        .fa-twitter {
+            color: #55acee
+        }
+
+        .footer-copyright p {
+            margin-top: 10px
+        }
+
+        /* Medium devices */
+
+        @media (min-width: 768px)and (max-width: 1024px) {
+            .ajuste-nav {
+                font-size: 1rem;
+            }
+
+            .ajuste-carousel {
+                height: 10rem;
+            }
+
+            .carousel-inner img {
+                max-height: 10rem;
+            }
+
+            .carousel-inner {
+                height: 10rem;
+            }
+
+            .compra {
+                padding: 0rem 5rem;
+            }
+
+            .titulo-compra {
+                margin: 1rem 0;
+                font-size: 1.5rem;
+            }
+
+            .ajuste-h2-accordion {
+                font-size: 0.95rem;
+            }
+
+            label {
+                font-size: 0.8rem;
+            }
+
+            .form-control {
+                height: 30px;
+                font-size: 0.7rem;
+            }
+
+            .card-body-accordeon {
+                padding: 0.3rem;
+            }
+
+            .letra-header-tarjeta {
+                font-size: 0.9rem;
+            }
+
+            .letra-tarjeta {
+                font-size: 0.8rem;
+            }
+
+            .btn-tarjeta {
+                font-size: 0.9rem;
+            }
+
+            .letra-factura {
+                font-size: 0.8rem;
+            }
+
+            .btn-comprar {
+                min-height: 2rem;
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+
+            .titulo2 {
+                margin-bottom: 1.5rem;
+                font-size: 1.5rem;
+            }
+
+            .newsletter .content {
+                max-width: 450px;
+            }
+
+            .btn-susc {
+                min-height: 30px;
+                font-size: 0.8rem;
+            }
+
+            .unsubscribe-link {
+                font-size: 0.7rem;
+            }
+
+            .ajuste-h6-footer {
+                font-size: 0.9rem;
+            }
+
+            .ajuste-p-footer {
+                font-size: 0.7rem;
+            }
+
+            .ajuste-img-footer {
+                width: 9.25rem;
+                height: 3.25rem;
+            }
+
+            .ajuste-img-footer-app {
+                width: 3.25rem;
+                height: 1rem;
+            }
+        }
+
+        /* Smartphones*/
+        @media (min-width: 320px) and (max-width: 480px) {
+            .ajuste-nav {
+                font-size: 0.7rem;
+            }
+
+            .ajuste-carousel {
+                height: 6rem;
+            }
+
+            .carousel-inner img {
+                max-height: 6rem;
+            }
+
+            .carousel-inner {
+                height: 6rem;
+            }
+
+            .compra {
+                padding: 0rem 0.5rem;
+            }
+
+            .titulo-compra {
+                margin: 1rem 0;
+                font-size: 1.1rem;
+            }
+
+            .ajuste-h2-accordion {
+                font-size: 0.8rem;
+            }
+
+            label {
+                font-size: 0.7rem;
+            }
+
+            .form-control {
+                height: 25px;
+                font-size: 0.6rem;
+            }
+
+            .card-body-accordeon {
+                padding: 0.1rem;
+            }
+
+            .letra-header-tarjeta {
+                font-size: 0.7rem;
+            }
+
+            .img-pago {
+                width: 1rem;
+            }
+
+            .ajuste-header-tarjeta {
+                padding: 0 1.2rem;
+            }
+
+            .letra-tarjeta {
+                font-size: 0.8rem;
+            }
+
+            .btn-tarjeta {
+                font-size: 0.8rem;
+            }
+
+            .letra-factura {
+                font-size: 0.7rem;
+            }
+
+            .ajuste-factura {
+                padding: 0.5rem 0;
+            }
+
+            .ancho-col {
+                width: 1rem;
+            }
+
+            .btn-comprar {
+                min-height: 2rem;
+                font-size: 0.9rem;
+                margin-top: 1rem;
+            }
+
+            .titulo2 {
+                margin: 0 0 1rem 0;
+                font-size: 0.9rem;
+            }
+
+            .newsletter .content {
+                max-width: 400px;
+            }
+
+            .btn-susc {
+                min-height: 1rem;
+                font-size: 0.6rem;
+            }
+
+            .unsubscribe-link {
+                font-size: 0.65rem;
+            }
+
+            .ajuste-container {
+                margin: 0;
+            }
+
+            .ajuste-h6-footer {
+                font-size: 0.7rem;
+            }
+
+            .ajuste-p-footer {
+                font-size: 0.65rem;
+            }
+
+            .ajuste-img-footer {
+                width: 9.25rem;
+                height: 3.25rem;
+            }
+
+            .ajuste-footer-xs {
+                display: none;
+            }
+
+            .footer-copyright p {
+                font-size: 0.5rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid p-0">
+            <header>
+                <nav
+                    class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-dark flex-column flex-md-row bd-navbar sticky-top ajuste-nav">
+                    <div class="container"><button data-toggle="collapse" class="navbar-toggler"
+                            data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                                class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navcol-1">
+                            <ul class="nav navbar-nav flex-grow-1 justify-content-between">
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="/"><img
+                                            src="img/tp1/logo.png" width="30" height="30"
+                                            class="d-inline-block align-top" alt="" loading="lazy"></a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Home</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Destinos</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Aliados</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Promociones</a>
+                                </li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contacto</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i
+                                            class="fa fa-search"></i></a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i
+                                            class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section>
+                <div id="carouselExampleCaptions" class="carousel slide ajuste-carousel" data-ride="carousel"
+                    data-inetrval="2000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/tp1/baru-2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="letra-carrusel">ISLA BARU</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/tp1/baru-3.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="letra-carrusel">ISLA BARU</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/tp1/baru-4.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="letra-carrusel">ISLA BARU</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </section>
+            <section class="compra">
+                <h5 class="titulo-compra">Completa tus datos y finaliza tu compra
+                </h5>
+                <div class="accordion mb-2" id="accordionExample" role="tablist">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left ajuste-h2-accordion" type="button"
+                                    data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Viajeros
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div role="tabpanel" id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="container-fluid">
+                                <div class="card-body">
+                                    <div class="row ">
+                                        <div class="col-lg-7 max-width mx-auto">
+                                            <div class="card max-widthmx-auto bg-light">
+                                                <div class="card-body bg-light card-body-accordeon">
+                                                    <div class="container-fluid">
+                                                        <form id="contact-form" role="form">
+                                                            <div class="controls">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group"> <label
+                                                                                for="form_need">Cantidad de Adultos
+                                                                            </label> <select id="form_need" name="need"
+                                                                                class="form-control" required="required"
+                                                                                data-error="Please specify your need.">
+                                                                                <option value="" selected disabled>
+                                                                                    --cantidad--</option>
+                                                                                <option>1</option>
+                                                                                <option>2</option>
+                                                                                <option>3
+                                                                                </option>
+                                                                            </select> </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group"> <label
+                                                                                for="form_need">Cantidad de Niños
+                                                                            </label> <select id="form_need" name="need"
+                                                                                class="form-control" required="required"
+                                                                                data-error="Please specify your need.">
+                                                                                <option value="" selected disabled>
+                                                                                    --cantidad--</option>
+                                                                                <option>1</option>
+                                                                                <option>2</option>
+                                                                                <option>3
+                                                                                </option>
+                                                                            </select> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group"> <label
+                                                                                for="form_name">Nombre Completo
+                                                                            </label>
+                                                                            <input id="form_name" type="text"
+                                                                                name="name" class="form-control"
+                                                                                placeholder="Ingrese su nombre completo"
+                                                                                required="required"
+                                                                                data-error="Su nombre es requerido">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group"> <label
+                                                                                for="form_number">Cedula de Ciudadania
+                                                                            </label>
+                                                                            <input id="form_number" type="number"
+                                                                                name="number" class="form-control"
+                                                                                placeholder="Ingrese su cedula"
+                                                                                required="required"
+                                                                                data-error="Su cedula es requerida">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed ajuste-h2-accordion"
+                                    type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Destino
+                                </button>
+                            </h2>
+                        </div>
+                        <div role="tabpanel" id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row ">
+                                    <div class="col-lg-7 mx-auto">
+                                        <div class="card mt-2 mx-auto bg-light">
+                                            <div class="card-body bg-light card-body-accordeon">
+                                                <div class="container-fluid">
+                                                    <form id="contact-form" role="form">
+                                                        <div class="controls">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group"> <label
+                                                                            for="form_need">Destino
+                                                                        </label> <select id="form_need" name="need"
+                                                                            class="form-control" required="required"
+                                                                            data-error="Please specify your need.">
+                                                                            <option value="" selected disabled>
+                                                                                --destino--</option>
+                                                                            <option>Baru</option>
+                                                                            <option>Caño Cristales</option>
+                                                                            <option>Desierto de la Tatacoa</option>
+                                                                        </select> </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group"> <label for="form_need">Ida
+                                                                        </label> <input id="form_date" type="date"
+                                                                            name="date" class="form-control" id="ida">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group"> <label
+                                                                            for="form_need">Regreso
+                                                                        </label> <input id="form_date" type="date"
+                                                                            name="date" class="form-control" id="ida">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed ajuste-h2-accordion"
+                                    type="button" data-toggle="collapse" data-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    Pago
+                                </button>
+                            </h2>
+                        </div>
+                        <div role="tabpanel" id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="padding">
+                                    <div class="row">
+                                        <div class="container-fluid d-flex justify-content-center ">
+                                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                                <div class="card  ">
+                                                    <div class="card-header ajuste-header-tarjeta">
+                                                        <div class="row">
+                                                            <div class="col-md-6 p-0 letra-header-tarjeta"> TARJETA
+                                                                DEBITO/CREDITO
+                                                            </div>
+                                                            <div class="col-md-6 text-right p-0"
+                                                                style="margin-top: -5px;">
+                                                                <img class=" img-pago "
+                                                                    src="https://img.icons8.com/color/36/000000/visa.png">
+                                                                <img class=" img-pago "
+                                                                    src="https://img.icons8.com/color/36/000000/mastercard.png">
+                                                                <img class="img-pago "
+                                                                    src="https://img.icons8.com/color/36/000000/amex.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <div class="form-group letra-tarjeta"> <label for="cc-number"
+                                                                class="control-label">Numero de Tarjeta</label> <input
+                                                                id="cc-number" type="tel"
+                                                                class="input-lg form-control cc-number"
+                                                                autocomplete="cc-number"
+                                                                placeholder="•••• •••• •••• ••••" required> </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group"> <label for="cc-exp"
+                                                                        class="control-label">Fecha de
+                                                                        Expiracion</label> <input id="cc-exp" type="tel"
+                                                                        class="input-lg form-control cc-exp"
+                                                                        autocomplete="cc-exp" placeholder="•• / ••"
+                                                                        required> </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group"> <label for="cc-cvc"
+                                                                        class="control-label">Codigo de
+                                                                        Verificacion</label> <input id="cc-cvc"
+                                                                        type="tel" class="input-lg form-control cc-cvc"
+                                                                        autocomplete="off" placeholder="••••" required>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group"> <label for="numeric"
+                                                                class="control-label">Nombre del Titular</label> <input
+                                                                type="text" class="input-lg form-control"> </div>
+                                                        <div class="form-group"> <input value="Agregar Tarjeta"
+                                                                type="button"
+                                                                class="btn  form-control rounded btn-tarjeta"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed ajuste-h2-accordion"
+                                    type="button" data-toggle="collapse" data-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                    Antes de finalizar verifica los datos ingresados
+                                </button>
+                            </h2>
+                        </div>
+                        <div role="tabpanel" id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body ajuste-factura">
+                                <div class="offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 padding">
+                                    <div class="card letra-factura">
+                                        <div class="card-body">
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="center">#</th>
+                                                            <th>Destino</th>
+                                                            <th>Descripcion</th>
+                                                            <th class="right">Precio</th>
+                                                            <th class="center">Viajeros</th>
+                                                            <th class="right">Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="center ancho-col">1</td>
+                                                            <td class="left strong">Baru</td>
+                                                            <td class="left">Plan alojamiento todo incluido 4 noches / 5
+                                                                dias en Hotel Decameron Baru</td>
+                                                            <td class="right">$1.500.000</td>
+                                                            <td class="center">2</td>
+                                                            <td class="right">$3.000.000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-sm-5">
+                                                </div>
+                                                <div class="col-lg-4 col-sm-5 ml-auto p-0">
+                                                    <table class="table table-clear">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="left">
+                                                                    <strong class="text-dark">Subtotal</strong>
+                                                                </td>
+                                                                <td class="right">$3.000.000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="left">
+                                                                    <strong class="text-dark">Descuento (20%)</strong>
+                                                                </td>
+                                                                <td class="right">$600.000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="left">
+                                                                    <strong class="text-dark">IVA (19%)</strong>
+                                                                </td>
+                                                                <td class="right">$456.000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="left">
+                                                                    <strong class="text-dark">Total</strong> </td>
+                                                                <td class="right">
+                                                                    <strong class="text-dark">$2.856.000</strong>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Leí y acepto las condiciones de compra ,
+                            políticas de privacidad y políticas de cambios y cancelaciones.</label>
+                        <br>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg btn-comprar">Comprar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="newsletter">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="content">
+                                    <h3 class="titulo2">Recibe nuestro boletín de ofertas</h3>
+                                    <div class="input-group"> <input type="email" class="form-control"
+                                            placeholder="Escribe tu email">
+                                        <button class="btn btn-susc" type="submit">Quiero
+                                            suscribirme</button>
+                                    </div>
+                                    <div class="text-center"> <a class="unsubscribe-link" href="#">Quieres eliminar tu
+                                            suscripcion?</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="container-fluid ">
+        <footer class="section-footer border-top ">
+            <div class="container-fluid ajuste-container ">
+                <section class="footer-top padding-y">
+                    <div class="row">
+                        <aside class="col-md-4">
+                            <article class="mr-3 ml-3"> <img class="img-responsive ajuste-img-footer"
+                                    src="img/tp1/logo grande.png" height="90" class="logo-footer">
+                                <p class="mt-3 description ajuste-p-footer ajuste-footer-xs">Paradice es una agencia de
+                                    viajes con mas
+                                    de 11 años de
+                                    trayectoria en el mercado, caracterizada por el buen servicio y oferta de
+                                    productos turísticos de calidad en destinos nacionales e internacionales.</p>
+                                <div> <a class="btn btn-icon btn-light" title="Facebook" target="_blank" href="#"
+                                        data-abc="true"><i class="fa fa-facebook-f"></i></a> <a
+                                        class="btn btn-icon btn-light" title="Instagram" target="_blank" href="#"
+                                        data-abc="true"><i class="fa fa-instagram"></i></a> <a
+                                        class="btn btn-icon btn-light" title="Youtube" target="_blank" href="#"
+                                        data-abc="true"><i class="fa fa-youtube"></i></a> <a
+                                        class="btn btn-icon btn-light" title="Twitter" target="_blank" href="#"
+                                        data-abc="true"><i class="fa fa-twitter"></i></a> </div>
+                            </article>
+                        </aside>
+                        <aside class="col-sm-3 col-md-2">
+                            <h6 class="title ajuste-h6-footer">Acerca de nosotros</h6>
+                            <ul class="list-unstyled ajuste-p-footer">
+                                <li> <a href="#" data-abc="true">Quienes Somos</a></li>
+                                <li> <a href="#" data-abc="true">Servicios</a></li>
+                                <li> <a href="#" data-abc="true">Terminos y Condiciones</a></li>
+                                <li> <a href="#" data-abc="true">Nuestro Blog</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-sm-3 col-md-2 ajuste-footer-xs">
+                            <h6 class="title ajuste-h6-footer ">Servicios</h6>
+                            <ul class="list-unstyled ajuste-p-footer">
+                                <li> <a href="#" data-abc="true">Servicio al Cliente</a></li>
+                                <li> <a href="#" data-abc="true">Codigo de Conducta</a></li>
+                                <li> <a href="#" data-abc="true">Politica de Privacidad</a></li>
+                                <li> <a href="#" data-abc="true">PQRS</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-sm-3 col-md-2 ajuste-footer-xs">
+                            <h6 class="title ajuste-h6-footer ">Para clientes</h6>
+                            <ul class="list-unstyled ajuste-p-footer">
+                                <li> <a href="#" data-abc="true"> Inicio de Sesion </a></li>
+                                <li> <a href="#" data-abc="true"> Resgitrate </a></li>
+                                <li> <a href="#" data-abc="true"> Ajustes de cuenta </a></li>
+                                <li> <a href="#" data-abc="true"> Mis paquetes </a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-sm-2 col-md-2 ajuste-footer-xs">
+                            <h6 class="title ajuste-h6-footer ">Our app</h6> <a href="#" class="d-block mb-2"
+                                data-abc="true"><img class="img-responsive ajuste-img-footer-app"
+                                    src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574317087/AAA/appstore.png"
+                                    height="40"></a> <a href="#" class="d-block mb-2" data-abc="true"><img
+                                    class="img-responsive ajuste-img-footer-app"
+                                    src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574317110/AAA/playmarket.png"
+                                    height="40"></a>
+                        </aside>
+                    </div>
+                </section>
+                <section class="footer-copyright border-top ajuste-h6-footer">
+                    <p class="float-left text-muted"> © 2020 All rights resetved </p>
+                    <p target="_blank" class="float-right text-muted"> <a href="#" data-abc="true">Privacidad &amp;
+                            Cookies</a> &nbsp; &nbsp; <a href="#" data-abc="true">Accesibilidad</a> </p>
+                </section>
+            </div>
+        </footer>
+        </output>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
